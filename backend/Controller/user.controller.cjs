@@ -16,6 +16,7 @@ const signToken = id => {
 exports.signup = asyncHandler(async (req, res, next) => {
     try {
 
+        console.log(req.body)
         const newUser = await User.create(req.body);
         const new_User = await User.create()
         const token = signToken(newUser._id);
@@ -240,10 +241,10 @@ exports.getVarified = async (req, res) => {
     </head>
     <body>
         <div class="container">
-            <h1>URBAN VOGUE</h1>
+            <h1>Library</h1>
             <div class="content">
                 <p>Dear User,</p>
-                <p>Thank you for registering with URBAN VOGUE. Your OTP for email verification is:</p>
+                <p>Thank you for registering with Library. Your OTP for email verification is:</p>
                 <div class="otp-code">${otp}</div>
                 <p>Please use this OTP to verify your email address and complete your registration process.</p>
                 <p class="note">Note: This OTP is valid for a limited time.</p>
@@ -303,13 +304,13 @@ exports.verifyOtp = async (req, res) => {
 exports.deleteMe = async (req, res, next) => {
     // Implement your deletion logic here
     try {
-      await User.findByIdAndDelete(req.user.id);
-      res.status(204).json({ status: 'success', data: null });
+        await User.findByIdAndDelete(req.user.id);
+        res.status(204).json({ status: 'success', data: null });
     } catch (error) {
-      console.error('Error deleting user:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+        console.error('Error deleting user:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
-  };
+};
 
 exports.getCurrentUser = asyncHandler(async (req, res, next) => {
     const user = await User.findById(req.user.id)

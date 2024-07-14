@@ -1,66 +1,82 @@
-.Signup-body {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .Signup-card {
-    height: auto;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    background-color: aliceblue;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-  }
-  
-  .heading {
-    margin-top: 10px;
-    font-size: 1.1em;
-  }
-  
-  p {
-    margin-top: 5px;
-    font-size: 0.9em;
-  }
-  
-  span {
-    text-decoration: underline;
-    color: blue;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 768px) {
-    .Signup-body {
-      height: auto;
-    }
-  
-    .Signup-card {
-      width: 90%;
-      padding: 15px;
-    }
-    
-  
-    .heading {
-      font-size: 1em;
-    }
-  
-    p {
-      font-size: 0.85em;
-    }
-  }
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+.signup-content {
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.signup-text {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.form-button {
+  width: 100%;
+  height: 40px;
+  background-color: #f37a5d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #e55e3d;
+}
+
+.form-link {
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: flex;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
