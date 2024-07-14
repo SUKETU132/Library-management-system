@@ -1,0 +1,21 @@
+.new-arrivals {
+    width: 45%;
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .new-arrivals h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    .new-arrivals {
+      width: 100%;
+    }
+  }
+  
